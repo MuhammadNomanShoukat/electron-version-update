@@ -1,0 +1,40 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "description": "electron-app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "com.example.yourapp",
+    "productName": "YourApp",
+    "files": [
+      "dist/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "author": "electron js",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^30.0.9",
+    "update-electron-app": "^3.0.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.13.3"
+  }
+}
